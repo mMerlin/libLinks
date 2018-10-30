@@ -15,3 +15,5 @@ then used as an external resource from jsfiddle.
 * paste the URL in the box
 * copy the development URL
 * paste into the external resource on jsfiddle
+
+The home page on [github.io](https://mmerlin.github.io/libLinks/index.html)
