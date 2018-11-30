@@ -14,6 +14,8 @@ then used as an external resource from jsfiddle.
 * goto to [rawgit.com](http://rawgit.com/)
 * paste the URL in the box
 * copy the development URL
+  * For `https://github.com/mMerlin/libLinks/blob/master/chartjs-issue-4439/Chart.bundle.js` that became `https://rawgit.com/mMerlin/libLinks/master/chartjs-issue-4439/Chart.bundle.js`
+    * just replace the `https://github.` prefix with `https://rawgit.`, and remove `/blob` from the basic (not raw) url
 * paste into the external resource on jsfiddle
 
 The libLinks [repository home page on github.io](https://mmerlin.github.io/libLinks/index.html)
