@@ -19,12 +19,14 @@
     background-color: grey;
 }
 
-/* attempt to implement simple slide show with just css and markdown.  Well, markdown with embedded html */
-.slides+ul {
+/* attempt to implement simple slide show with just css and markdown.  Well, markdown with (minimal) embedded html
+github is using anchors.add() from anchors.js (currently version 4.1.0), which adds an id header (h2 h3 … h5?) elements that matches the element content (whitespace and none text content converted to "-")
+*/
+#slides+ul {
 	list-style-type: none;
 	padding: 0;
 }
 
-.slides+ul img {
+#slides+ul img {
 	width: 100%;
 }
