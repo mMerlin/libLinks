@@ -48,13 +48,17 @@ If possible, group style sheet sections together by using comments.  Separate se
 	flex-flow: row wrap;
 }
 
-a {
-    background-color: blueviolet;
+.markdown-body h1 {
+	margin-top: 0px;
+}
+
+.markdown-body > h1:first-child {
+	display: none;
 }
 
 .anchor {
-    padding: 0 1em 0 1em;
-    background-color: crimson;
+    padding: 0 1em 0 2em;
+    background-color: grey;
 }
 
 /* Header */

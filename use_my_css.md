@@ -1,7 +1,10 @@
-<link href="css/my_css.css" rel="stylesheet"></link>
+<link href="css/my_css.css" rel="stylesheet"/>
 <!-- cSpell:enable -->
 # Use my specified css stylesheet
 
+Hide the gfm generated h1 title, and use (only) my own.
+
+* [back to index](index.html)
 * [A local document test link](#link_test)
 
 <!--
@@ -10,6 +13,8 @@
 -->
 
 ## <a class="anchor" name="link_test">⚓</a> A local document link target
+
+A simple markdown document to test overriding the standard gfm styling.  Which turns out to be Jekyll with what looks like bootstrap.
 
 <!-- cSpell:disable -->
 <!-- cSpell:enable -->
