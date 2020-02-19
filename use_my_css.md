@@ -1,6 +1,6 @@
-<link href="css/my_css.css" rel="stylesheet"/>
-<!-- cSpell:enable -->
 # Use my specified css stylesheet
+
+<link href="css/my_css.css" rel="stylesheet"/>
 
 Hide the gfm generated h1 title, and use (only) my own.
 
