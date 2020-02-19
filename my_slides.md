@@ -6,22 +6,10 @@
 
 Testing out what might work do do a simple slide show with (mostly) standard markdown content.
 
-Start with a bare image, to see how github converts it to html, to figure out where to hang css rules
+## <a class="slides" name="link_slides">⚓</a> Slides
 
-![Bare led matrix assembly before wire wrapping](images/wirewrap-eye-sequence00-bb.svg "Assembled parts but no wires")
-
-Add a header.  Might be able to reference than, even if end up hiding the actual element
-
-## header level 2
-
-### header level 3
-
-Embedded image in a list
-
-* ![matrix pin 7 to driver pin 21 (row 6)](images/wirewrap-eye-sequence01-bb.svg "row 6")
-
-* as nested list element
-  * ![matrix pin 2 to driver pin 15 (row 7)](images/wirewrap-eye-sequence02-bb.svg "row 7")
+* aa</br>![matrix pin 7 to driver pin 21 (row 6)](images/wirewrap-eye-sequence01-bb.svg "row 6")</br>bb</br><a href="slide1">sl1</a>
+* cc</br>![matrix pin 2 to driver pin 15 (row 7)](images/wirewrap-eye-sequence02-bb.svg "row 7")</br>dd</br><a href="slide2">sl2</a>
 
 <!--
 * [Link](#link_link)
