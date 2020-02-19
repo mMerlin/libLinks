@@ -9,6 +9,7 @@ Some links to test and reference files
 * [nested ordered lists](nested_ol.html) for [markdown-view issue report](https://github.com/KeithLRobertson/markdown-viewer/issues/44)
   * [alternate indent](nested_ol2.html)
 * [markdown css override](use_my_css.html)
+* [slideshow in markdown](my_slides.html)
 
 <!--
 * [Link](#link_link)
