@@ -1,3 +1,4 @@
+<!-- cSpell:enable -->
 # libLinks
 
 This repository is a convenient place to put and manage files that I need to be able to access from elsewhere on the Internet.
@@ -8,6 +9,7 @@ repository, and do a full commit, push cycle for every tweak during testing.  Th
 then used as an external resource from jsfiddle.
 
 [How to use a file in a github repository as a jsfiddle external resource](https://stackoverflow.com/questions/9841026/reference-github-file-in-jsfiddle)
+
 * Go to the file on github
 * click RAW
 * copy the URL
@@ -19,3 +21,14 @@ then used as an external resource from jsfiddle.
 * paste into the external resource on jsfiddle
 
 The libLinks [repository home page on github.io](https://mmerlin.github.io/libLinks/index.html)
+
+<!-- cSpell:disable -->
+<!-- cSpell:enable -->
+<!--
+# cSpell:disable
+# cSpell:enable
+applications, commands, keywords
+  cSpell:words jsfiddle rawgit
+cSpell:ignore
+c Spell:enableCompoundWords
+-->
