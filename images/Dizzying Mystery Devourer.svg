@@ -1,0 +1,580 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  version="1.2"
+  height="50cm"
+  width="35cm"
+  viewBox="0 0 350 500"
+  x="0"
+  y="0"
+>
+<!--
+  viewBox="186 115 10.5 15"
+  viewBox="145 80 70 100"
+  viewBox="119 250 35 50"
+  viewBox="130 180 35 50"
+  viewBox="80 90 35 50"
+  viewBox="20 10 35 50"
+  viewBox="8 96 35 50"
+  viewBox="8 95 35 50"
+  viewBox="20 10 35 50"
+  viewBox="0 0 350 500"
+-->
+  <defs>
+    <path id="sliding_door" stroke-width=".3" fill="#dddddd" stroke="black" d="m-4,-1 v2h8v-2z" />
+    <g id="fresher" fill="white" stroke="#e98229" stroke-width=".4" >
+      <path d="m-5,-5 v10h10v-10z" stroke="black" stroke-width="1" fill="none"/>
+      <rect x="-3.5" y="-4" width="7" height="6.7" rx="1.5" />
+      <line x1="-3.5" x2="3.5" y1="-1" y2="-1" />
+      <circle cx="0" cy="-2.5" r=".7" fill="none" stroke-width=".7"/>
+      <use y="5" href="#sliding_door"/>
+    </g>
+    <g id="single_bed"  fill="white" stroke="#e98229" stroke-width=".4" >
+      <rect width="12" height="5" rx=".5"/>
+      <line x1="3" x2="3" y1="0" y2="5" />
+      <rect x=".75" y="1" width="1.5" height="3" rx=".3" />
+    </g>
+    <g id="bunks" fill="none" >
+      <use x="6" y="3.5" href="#single_bed" />
+      <use x="4.5" y="2.5" href="#single_bed" />
+    </g>
+    <g id="stateroom">
+      <path stroke="black" stroke-width="1"
+        d="m-10,15 v-30 h20 v30" />
+      <use x="-10" y="5" href="#bunks" />
+      <use x="5" y="-10" href="#fresher" />
+      <use x="-5" y="-15" href="#sliding_door"/>
+    </g>
+    <g id="pressure_hatch" >
+      <path d="m-2,-4 h.5 q 1.5,4 3,0 h.5 c -2.25,5 -2.25,3 0,8 h-.5 q-1.5,-4 -3,0 h-.5 c 2.25,-5 2.25,-3 0,-8 z m1.5,-1.25 h1v1.75h-1z m0,8.5 h1v1.75h-1z" fill="black" stroke="none" />
+    </g>
+    <g id="airlock_hatch" >
+      <use href="#pressure_hatch" />
+      <line x1="-1.5" x2="1.5" y1="0" y2="0" />
+    </g>
+    <g id="workstation" fill="white" stroke="#e98229" stroke-width=".4" >
+      <path d="m-4.5,-4.5 q 4,-1 9,0 v.7 q -4.5,1 -9,0z" />
+      <ellipse cx="0" cy="4.7" rx="3.6" ry=".9" />
+      <ellipse cx="-3.6" cy=".7" rx=".7" ry="2.7" />
+      <ellipse cx="3.6" cy=".7" rx=".7" ry="2.7" />
+      <ellipse cx="0" cy="-1.7" rx="3.1" ry=".9" />
+      <rect x="-3.1" y="-1.6" width="6.2" height="5.8" rx=".2" />
+    </g>
+    <g id="table_and_chairs" fill="white" stroke="#e98229" stroke-width=".3" >
+      <ellipse cx="-3.8" rx="1.3" ry="2.2" />
+      <ellipse cx="3.8" rx="1.3" ry="2.2" />
+      <ellipse cy="3.8" rx="2.2" ry="1.3" />
+      <ellipse cy="-3.8" rx="2.2" ry="1.3" />
+      <circle r="3.8" />
+    </g>
+    <g id="raft_chair" fill="white" stroke="#e98229" stroke-width=".3" >
+      <path d="m0,0 h3.9 a2,2 0 0 1 0,4.5 h-3.9 z m.9,0 v4.5" />
+    </g>
+    <g id="air_raft" fill="white" stroke="#e98229" stroke-width=".3">
+      <rect x="-13" y="-6" width="26" height="12" rx="1" />
+      <line x1="-9" x2="-9" y1="-6" y2="6" />
+      <path d="m-12,-4 c.1,-.5 1.6,-1.2 2,.5
+        v7 c -.4,1.7 -1.9,1 -2,.5z" />
+      <use x="6.1" y="-5" href="#raft_chair" />
+      <use x="-.7" y="-5" href="#raft_chair" />
+      <use x="-7.5" y="-5" href="#raft_chair" />
+      <use x="6.1" y=".5" href="#raft_chair" />
+      <use x="-.7" y=".5" href="#raft_chair" />
+      <use x="-7.5" y=".5" href="#raft_chair" />
+    </g>
+    <g id="single_drone" fill="white" stroke="#e98229" stroke-width=".7">
+      <!-- <path d="m-1.73,.5 1.73,1 1.73,-1 0,-2 -1.73,-1 -1.73,1z" /> -->
+      <!-- <path d="m-2.425,.7 2.425,1.4 2.425,-1.4 0,-2.8 -2.425,-1.4 -2.425,1.4z" /> -->
+      <!--
+      <path d="m-2.252,.65 2.252,1.3 2.252,-1.3 0,-2.6 -2.252,-1.3 -2.252, 1.3z" /> -->
+      <path d="m-2.0785,.6 2.0785,1.2 2.0785,-1.2 0,-2.4 -2.0785,-1.2 -2.0785,1.3z" />
+      <rect x="-.1" y="-.6" width=".2" height=".2" />
+    </g>
+    <g id="probe_drones" >
+      <use y="-4.5" href="#single_drone" />
+      <use x="-2.6" href="#single_drone" />
+      <use x="2.6" href="#single_drone" />
+      <use y="4.5" href="#single_drone" />
+      <use x="-5.2" y="4.5" href="#single_drone" />
+      <use x="5.2" y="4.5" href="#single_drone" />
+    </g>
+    <g id="library">
+      <path stroke="black" stroke-width="1"
+        d="m-10,15 v-30 h20 v30" />
+      <use y="-15" href="#sliding_door"/>
+      <use y="2" href="#workstation" transform="rotate(180, 0,2)" />
+    </g>
+    <g id="medical_bay">
+      <path stroke="black" stroke-width="1"
+        d="m-10,15 v-30 h20 v30" />
+      <text x="-8" y="2">MB</text>
+      <use y="-15" href="#sliding_door"/>
+      <use x="-6" y="7.5" href="#single_bed"/>
+    </g>
+    <g id="workshop">
+      <path stroke="black" stroke-width="1"
+        d="m-15,15 v-30 h30 v30" />
+      <text x="-5" y="5">W</text>
+      <use y="-15" href="#sliding_door"/>
+    </g>
+    <g id="repair_drones">
+      <path stroke="black" stroke-width="1"
+        d="m-10,15 v-30 h20 v30" />
+      <use x="5" y="-15" href="#sliding_door"/>
+      <use x="-3" y="-8" href="#workstation" transform="rotate(-90 -3,-8)" />
+      <use y="2.5" href="#single_drone" />
+      <use x="-2.6" y="6.5" href="#single_drone" />
+      <use x="2.6" y="6.5" href="#single_drone" />
+      <use y="11" href="#single_drone" />
+      <use x="-5.2" y="11" href="#single_drone" />
+      <use x="5.2" y="11" href="#single_drone" />
+    </g>
+    <g id="multienvironment1">
+      <line x1="-20" x2="-20" y1="15" y2="-25" />
+      <line x1="-20" x2="0" y1="-25" y2="-25" />
+      <line x1="10" x2="20" y1="-25" y2="-25" />
+      <line x1="20" x2="20" y1="-25" y2="15" />
+      <use x="5" y="-25" href="#pressure_hatch" transform="rotate(90 5,-25)" />
+      <path d="m9,13 h-28v-18h-11v-19h49v28z" stroke="green" stroke-dasharray="3.5" stroke-width=".5"/>
+      <text x="-8" >ME</text>
+    </g>
+    <g id="multienvironment2">
+      <line x1="-25" x2="-25" y1="15" y2="-15" />
+      <line x1="-25" x2="-15" y1="-15" y2="-15" />
+      <line x1="-5" x2="25" y1="-15" y2="-15" />
+      <line x1="25" x2="25" y1="-15" y2="15" />
+      <use x="-10" y="-15" href="#pressure_hatch" transform="rotate(90 -10,-15)" />
+      <path stroke="green" stroke-dasharray="3.5" stroke-width=".5" d="m-24,-14 v28h48v-9h11v-19z
+      " />
+      <!-- <rect x="-24" y="-14" width="48" height="28" stroke="green" stroke-dasharray="3.5" stroke-width=".5" /> -->
+      <text x="-5" y="4" >ME</text>
+    </g>
+    <g id="elevator" fill="white" stroke="black" stroke-width=".5">
+      <path d="m-2,3.464 4,0 2,-3.464 -2,-3.464 -4,0 -2,3.464z" />
+      <circle r="1.3" stroke-dasharray="none" />
+    </g>
+    <g id="elevator_shaft"  stroke-dasharray="3 1" stroke-dashoffset="1.5">
+      <use href="#elevator" />
+    </g>
+    <g id="bare_engineering_display">
+      <circle r="4" stroke="#999999" />
+      <circle r="3.4" stroke="black" stroke-width=".3"/>
+    </g>
+    <g id="engineering_display_down">
+      <use href="#bare_engineering_display" />
+      <path stroke-width=".2" d="m-3.2,-.7 c 2.5,0 1,1.4 3.2,1.4 c 2.5,0 1,-1.4 3.2,-1.4" />
+    </g>
+    <g id="engineering_display_up">
+      <use href="#bare_engineering_display" />
+      <path stroke-width=".2" d="m-3.2,.7 c 2.5,0 1,-1.4 3.2,-1.4 c 2.5,0 1,1.4 3.2,1.4" />
+    </g>
+    <g id="engineering_console0">
+      <path stroke-width=".3" fill="#aaaaaa" d="m-16,-2 a 2,2 0 0 1 2,-2 h29 a 2,2 0 0 1 2,2 v7 a 2,2 0 0 1 -2,2 h-.5v-1h-28v1h-.5 a 2,2 0 0 1 -2,-2z" />
+      <rect x="2" y="6" width="10" height="1" stroke-width=".3" fill="#888888"/>
+      <rect x="-11" y="6" width="10" height="1" stroke-width=".3" fill="#888888"/>
+      <use x="11" y="1" href="#engineering_display_down" />
+    </g>
+    <g id="engineering_console1">
+      <use href="#engineering_console0" />
+      <use x="0" y="1" href="#engineering_display_up" />
+    </g>
+    <g id="engineering_console2">
+      <use href="#engineering_console0" />
+      <use x="-11" y="1" href="#engineering_display_up" />
+    </g>
+    <rect id="fuel" x="-5" y="-5" width="10" height="10" fill="#8d7560" stroke="none"/>
+
+  </defs>
+  <rect x="0" y="0" width="350" height="500" fill="aqua" />
+  <desc>Dizzying Mystery Devourer modified Laboratory Ship floorplans</desc>
+  <g stroke="black" stroke-width="1" fill="none" >
+    <g id="Q1main" transform="translate(10 20)" >
+      <path stroke-width="2" fill="#cccccc"
+        d="m0,0 h320 v40 h-40 l-10,10 h-230 l-10,-10 h-30z" />
+      <g stroke="#999999" stroke-width=".1">
+        <line x1="0" x2="320" y1="10" y2="10" />
+        <line x1="0" x2="320" y1="20" y2="20" />
+        <line x1="0" x2="320" y1="30" y2="30" />
+        <line x1="30" x2="280" y1="40" y2="40" />
+        <line x1="10" x2="10" y1="0" y2="40" />
+        <line x1="20" x2="20" y1="0" y2="40" />
+        <line x1="30" x2="30" y1="0" y2="40" />
+        <line x1="40" x2="40" y1="0" y2="50" />
+        <line x1="50" x2="50" y1="0" y2="50" />
+        <line x1="60" x2="60" y1="0" y2="50" />
+        <line x1="70" x2="70" y1="0" y2="50" />
+        <line x1="80" x2="80" y1="0" y2="50" />
+        <line x1="90" x2="90" y1="0" y2="50" />
+        <line x1="100" x2="100" y1="0" y2="50" />
+        <line x1="110" x2="110" y1="0" y2="50" />
+        <line x1="120" x2="120" y1="0" y2="50" />
+        <line x1="130" x2="130" y1="0" y2="50" />
+        <line x1="140" x2="140" y1="0" y2="50" />
+        <line x1="150" x2="150" y1="0" y2="50" />
+        <line x1="160" x2="160" y1="0" y2="50" />
+        <line x1="170" x2="170" y1="0" y2="50" />
+        <line x1="180" x2="180" y1="0" y2="50" />
+        <line x1="190" x2="190" y1="0" y2="50" />
+        <line x1="200" x2="200" y1="0" y2="50" />
+        <line x1="210" x2="210" y1="0" y2="50" />
+        <line x1="220" x2="220" y1="0" y2="50" />
+        <line x1="230" x2="230" y1="0" y2="50" />
+        <line x1="240" x2="240" y1="0" y2="50" />
+        <line x1="250" x2="250" y1="0" y2="50" />
+        <line x1="260" x2="260" y1="0" y2="50" />
+        <line x1="270" x2="270" y1="0" y2="50" />
+        <line x1="280" x2="280" y1="0" y2="40" />
+        <line x1="290" x2="290" y1="0" y2="40" />
+        <line x1="300" x2="300" y1="0" y2="40" />
+        <line x1="310" x2="310" y1="0" y2="40" />
+      </g>
+      <line x1="0" x2="0" y1="0" y2="40" stroke-width="2" stroke-dasharray="2 9" stroke-dashoffset="3" stroke="#cccccc" />
+      <line x1="320" x2="320" y1="0" y2="40" stroke-width="2" stroke-dasharray="2 9" stroke-dashoffset="3" stroke="#cccccc" />
+      <line x1="30" x2="30" y1="10" y2="40" />
+      <line x1="100" x2="100" y1="10" y2="50" />
+      <line x1="160" x2="160" y1="10" y2="50" />
+      <line x1="230" x2="230" y1="10" y2="50" />
+      <line x1="280" x2="280" y1="10" y2="40" />
+      <line x1="310" x2="310" y1="10" y2="40" />
+
+      <use x="30" y="5" href="#pressure_hatch" />
+      <use x="100" y="5" href="#pressure_hatch" />
+      <use x="160" y="5" href="#pressure_hatch" />
+      <use x="230" y="5" href="#pressure_hatch" />
+      <use x="280" y="5" href="#pressure_hatch" />
+      <use x="310" y="5" href="#pressure_hatch" />
+      <use x="0" y="25" href="#medical_bay" />
+    </g>
+
+    <g id="Q2main" transform="translate(10,100)" >
+      <path stroke-width="2" fill="#cccccc"
+        d="m0,0 h140 l10,-10 h40 l10,10 h120 v40 h-120 l-10,20 h-40 l-10,-20 h-140z" />
+      <g stroke="#999999" stroke-width=".1">
+        <line x1="140" x2="200" y1="0" y2="0" />
+        <line x1="0" x2="320" y1="10" y2="10" />
+        <line x1="0" x2="320" y1="20" y2="20" />
+        <line x1="0" x2="320" y1="30" y2="30" />
+        <line x1="140" x2="200" y1="40" y2="40" />
+        <line x1="145" x2="195" y1="50" y2="50" />
+        <line x1="10" x2="10" y1="0" y2="40" />
+        <line x1="20" x2="20" y1="0" y2="40" />
+        <line x1="30" x2="30" y1="0" y2="40" />
+        <line x1="40" x2="40" y1="0" y2="40" />
+        <line x1="50" x2="50" y1="0" y2="40" />
+        <line x1="60" x2="60" y1="0" y2="40" />
+        <line x1="70" x2="70" y1="0" y2="40" />
+        <line x1="80" x2="80" y1="0" y2="40" />
+        <line x1="90" x2="90" y1="0" y2="40" />
+        <line x1="100" x2="100" y1="0" y2="40" />
+        <line x1="110" x2="110" y1="0" y2="40" />
+        <line x1="120" x2="120" y1="0" y2="40" />
+        <line x1="130" x2="130" y1="0" y2="40" />
+        <line x1="140" x2="140" y1="0" y2="40" />
+        <line x1="150" x2="150" y1="-10" y2="60" />
+        <line x1="160" x2="160" y1="-10" y2="60" />
+        <line x1="170" x2="170" y1="-10" y2="60" />
+        <line x1="180" x2="180" y1="-10" y2="60" />
+        <line x1="190" x2="190" y1="-10" y2="60" />
+        <line x1="200" x2="200" y1="0" y2="40" />
+        <line x1="210" x2="210" y1="0" y2="40" />
+        <line x1="220" x2="220" y1="0" y2="40" />
+        <line x1="230" x2="230" y1="0" y2="40" />
+        <line x1="240" x2="240" y1="0" y2="40" />
+        <line x1="250" x2="250" y1="0" y2="40" />
+        <line x1="260" x2="260" y1="0" y2="40" />
+        <line x1="270" x2="270" y1="0" y2="40" />
+        <line x1="280" x2="280" y1="0" y2="40" />
+        <line x1="290" x2="290" y1="0" y2="40" />
+        <line x1="300" x2="300" y1="0" y2="40" />
+        <line x1="310" x2="310" y1="0" y2="40" />
+      </g>
+      <line x1="0" x2="0" y1="0" y2="40" stroke-width="2" stroke-dasharray="2 9" stroke-dashoffset="3" stroke="#cccccc" />
+      <line x1="320" x2="320" y1="0" y2="40" stroke-width="2" stroke-dasharray="2 9" stroke-dashoffset="3" stroke="#cccccc" />
+      <line x1="140" x2="140" y1="10" y2="40" />
+      <line x1="200" x2="200" y1="10" y2="40" />
+      <line x1="310" x2="310" y1="10" y2="40" />
+      <line x1="175" x2="200" y1="0" y2="0" />
+      <line x1="140" x2="165" y1="0" y2="0" />
+      <line x1="140" x2="180" y1="10" y2="10" />
+      <line x1="190" x2="200" y1="10" y2="10" />
+      <line x1="200" x2="230" y1="10" y2="10" />
+      <use x="140" y="5" href="#pressure_hatch" />
+      <use x="200" y="5" href="#pressure_hatch" />
+      <use x="310" y="5" href="#pressure_hatch" />
+      <use x="170" y="0" href="#pressure_hatch" transform="rotate(90 170,0)" />
+      <use x="185" y="10" href="#pressure_hatch" transform="rotate(90 185,10)" />
+      <use x="10" y="25" href="#stateroom" />
+      <use x="30" y="25" href="#stateroom" />
+      <use x="50" y="25" href="#stateroom" />
+      <use x="70" y="25" href="#stateroom" />
+      <use x="240" y="25" href="#stateroom" />
+      <use x="260" y="25" href="#stateroom" />
+      <use x="90" y="25" href="#library" />
+      <use x="260" y="25" href="#stateroom" />
+      <use x="280" y="25" href="#stateroom" />
+      <use x="300" y="25" href="#stateroom" />
+      <use x="320" y="25" href="#medical_bay" />
+      <use x="119" y="10" href="#table_and_chairs" />
+      <use x="110" y="30" href="#table_and_chairs" />
+      <use x="130" y="30" href="#table_and_chairs" />
+      <use x="209" y="20" href="#table_and_chairs" />
+      <use x="221" y="30" href="#table_and_chairs" />
+      <use x="215" y="10" href="#sliding_door" />
+      <use x="145" y="15" href="#elevator_shaft" />
+      <use x="195" y="15" href="#elevator_shaft" />
+      <use x="170" y="20" href="#engineering_console1" />
+      <use x="170" y="34" href="#engineering_console0" />
+      <use x="170" y="48" href="#engineering_console2" />
+    </g>
+
+    <g id="docking_ring" transform="translate(100 180)">
+      <rect width="140" height="40" fill="#8d7560" stroke="black" stroke-width=".5"/>
+      <path stroke-width="2" fill="#cccccc" d="m-5,10 h145v-10h80v40h-80v-10h-80v-10h-65z" />
+      <rect x="200" width="20" height="40" fill="#8d7560" stroke="none"/>
+      <g stroke="#999999" stroke-width=".1">
+        <line x1="140" x2="160" y1="10" y2="10" />
+        <line x1="60" x2="160" y1="20" y2="20" />
+        <line x1="140" x2="160" y1="30" y2="30" />
+        <line x1="0" x2="0" y1="10" y2="20" />
+        <line x1="10" x2="10" y1="10" y2="20" />
+        <line x1="20" x2="20" y1="10" y2="20" />
+        <line x1="30" x2="30" y1="10" y2="20" />
+        <line x1="40" x2="40" y1="10" y2="20" />
+        <line x1="50" x2="50" y1="10" y2="20" />
+        <line x1="60" x2="60" y1="10" y2="20" />
+        <line x1="70" x2="70" y1="10" y2="30" />
+        <line x1="80" x2="80" y1="10" y2="30" />
+        <line x1="90" x2="90" y1="10" y2="30" />
+        <line x1="100" x2="100" y1="10" y2="30" />
+        <line x1="110" x2="110" y1="10" y2="30" />
+        <line x1="120" x2="120" y1="10" y2="30" />
+        <line x1="130" x2="130" y1="10" y2="30" />
+        <line x1="140" x2="140" y1="10" y2="30" />
+        <line x1="150" x2="150" y1="0" y2="40" />
+        <line x1="160" x2="160" y1="0" y2="40" />
+      </g>
+      <rect x="160" width="40" height="40" stroke="none" fill="#999999" />
+      <line x1="140" x2="140" y1="20" y2="30" />
+      <line x1="160" x2="160" y1="0" y2="10" />
+      <line x1="160" x2="160" y1="20" y2="40" />
+      <line x1="200" x2="200" y1="0" y2="40" />
+      <use x="60" y="15" href="#pressure_hatch" />
+      <use x="140" y="15" href="#airlock_hatch" />
+      <use x="160" y="15" href="#airlock_hatch" />
+      <use x="0" y="15" href="#elevator" />
+      <use x="65" y="25" href="#fresher" transform="rotate(-90 65,25)" />
+    </g>
+
+    <g id="Q3main" transform="translate(10 240)" >
+      <path stroke-width="2" fill="#cccccc"
+        d="m0,0 h320 v40 h-320z" />
+      <use x="165" y="25" href="#fuel" />
+      <use x="175" y="25" href="#fuel" />
+      <use x="165" y="35" href="#fuel" />
+      <use x="175" y="35" href="#fuel" />
+      <g stroke="#999999" stroke-width=".1">
+        <line x1="0" x2="320" y1="10" y2="10" />
+        <line x1="0" x2="320" y1="20" y2="20" />
+        <line x1="0" x2="320" y1="30" y2="30" />
+        <line x1="10" x2="10" y1="0" y2="40" />
+        <line x1="20" x2="20" y1="0" y2="40" />
+        <line x1="30" x2="30" y1="0" y2="40" />
+        <line x1="40" x2="40" y1="0" y2="40" />
+        <line x1="50" x2="50" y1="0" y2="40" />
+        <line x1="60" x2="60" y1="0" y2="40" />
+        <line x1="70" x2="70" y1="0" y2="40" />
+        <line x1="80" x2="80" y1="0" y2="40" />
+        <line x1="90" x2="90" y1="0" y2="40" />
+        <line x1="100" x2="100" y1="0" y2="40" />
+        <line x1="110" x2="110" y1="0" y2="40" />
+        <line x1="120" x2="120" y1="0" y2="40" />
+        <line x1="130" x2="130" y1="0" y2="40" />
+        <line x1="140" x2="140" y1="0" y2="40" />
+        <line x1="150" x2="150" y1="0" y2="40" />
+        <line x1="160" x2="160" y1="0" y2="40" />
+        <line x1="170" x2="170" y1="0" y2="40" />
+        <line x1="180" x2="180" y1="0" y2="40" />
+        <line x1="190" x2="190" y1="0" y2="40" />
+        <line x1="200" x2="200" y1="0" y2="40" />
+        <line x1="210" x2="210" y1="0" y2="40" />
+        <line x1="220" x2="220" y1="0" y2="40" />
+        <line x1="230" x2="230" y1="0" y2="40" />
+        <line x1="240" x2="240" y1="0" y2="40" />
+        <line x1="250" x2="250" y1="0" y2="40" />
+        <line x1="260" x2="260" y1="0" y2="40" />
+        <line x1="270" x2="270" y1="0" y2="40" />
+        <line x1="280" x2="280" y1="0" y2="40" />
+        <line x1="290" x2="290" y1="0" y2="40" />
+        <line x1="300" x2="300" y1="0" y2="40" />
+        <line x1="310" x2="310" y1="0" y2="40" />
+      </g>
+      <line x1="0" x2="0" y1="0" y2="40" stroke-width="2" stroke-dasharray="2 9" stroke-dashoffset="3" stroke="#cccccc" />
+      <line x1="320" x2="320" y1="0" y2="40" stroke-width="2" stroke-dasharray="2 9" stroke-dashoffset="3" stroke="#cccccc" />
+
+      <use x="10" y="25" href="#stateroom" />
+      <use x="30" y="25" href="#stateroom" />
+      <use x="50" y="25" href="#stateroom" />
+      <use x="70" y="25" href="#stateroom" />
+      <use x="90" y="25" href="#stateroom" />
+      <use x="110" y="25" href="#stateroom" />
+
+      <line x1="160" x2="180" y1="20" y2="20" />
+      <line x1="160" x2="160" y1="10" y2="40" />
+      <line x1="180" x2="180" y1="10" y2="40" />
+      <line x1="200" x2="200" y1="10" y2="40" />
+      <line x1="300" x2="300" y1="10" y2="40" />
+      <line x1="120" x2="130" y1="10" y2="10" />
+      <line x1="140" x2="160" y1="10" y2="10" />
+      <line x1="160" x2="170" y1="10" y2="10" />
+      <line x1="180" x2="190" y1="10" y2="10" />
+      <line x1="200" x2="250" y1="10" y2="10" />
+      <line x1="260" x2="300" y1="10" y2="10" />
+      <line x1="300" x2="320" y1="10" y2="10" />
+
+      <use x="300" y="25" href="#sliding_door" transform="rotate(90 300,25)" />
+
+      <use x="160" y="5" href="#pressure_hatch" />
+      <use x="210" y="5" href="#pressure_hatch" />
+      <use x="170" y="15" href="#pressure_hatch" />
+      <use x="135" y="10" href="#pressure_hatch" transform="rotate(90 135,10)" />
+      <use x="195" y="10" href="#pressure_hatch" transform="rotate(90 195,10)" />
+      <use x="255" y="10" href="#pressure_hatch" transform="rotate(90 255,10)" />
+
+      <use x="235" y="27" href="#workstation" />
+      <use x="250" y="24" href="#workstation" />
+      <use x="265" y="27" href="#workstation" />
+      <use x="207" y="17" href="#workstation" transform="rotate(-45 207,17)" />
+      <use x="293" y="17" href="#workstation" transform="rotate(45 293,17)" />
+      <use x="313" y="25" href="#workstation" transform="rotate(90 313,25)" />
+      <use x="140" y="25" href="#air_raft" />
+      <use x="165" y="15" href="#elevator_shaft" />
+    </g>
+
+    <g id="Q4main" transform="translate(10,310)" >
+      <path stroke-width="2" fill="#cccccc"
+        d="m0,0 h140 l10,-10 h40 l10,10 h120 v40 h-120 l-10,20 h-40 l-10,-20 h-30 l-10,10 h-90 l-10,-10z" />
+      <g stroke="#999999" stroke-width=".1">
+        <line x1="140" x2="200" y1="0" y2="0" />
+        <line x1="0" x2="320" y1="10" y2="10" />
+        <line x1="0" x2="320" y1="20" y2="20" />
+        <line x1="0" x2="320" y1="30" y2="30" />
+        <line x1="0" x2="110" y1="40" y2="40" />
+        <line x1="140" x2="200" y1="40" y2="40" />
+        <line x1="145" x2="195" y1="50" y2="50" />
+        <line x1="10" x2="10" y1="0" y2="50" />
+        <line x1="20" x2="20" y1="0" y2="50" />
+        <line x1="30" x2="30" y1="0" y2="50" />
+        <line x1="40" x2="40" y1="0" y2="50" />
+        <line x1="50" x2="50" y1="0" y2="50" />
+        <line x1="60" x2="60" y1="0" y2="50" />
+        <line x1="70" x2="70" y1="0" y2="50" />
+        <line x1="80" x2="80" y1="0" y2="50" />
+        <line x1="90" x2="90" y1="0" y2="50" />
+        <line x1="100" x2="100" y1="0" y2="50" />
+        <line x1="110" x2="110" y1="0" y2="40" />
+        <line x1="120" x2="120" y1="0" y2="40" />
+        <line x1="130" x2="130" y1="0" y2="40" />
+        <line x1="140" x2="140" y1="0" y2="40" />
+        <line x1="150" x2="150" y1="-10" y2="60" />
+        <line x1="160" x2="160" y1="-10" y2="60" />
+        <line x1="170" x2="170" y1="-10" y2="60" />
+        <line x1="180" x2="180" y1="-10" y2="60" />
+        <line x1="190" x2="190" y1="-10" y2="60" />
+        <line x1="200" x2="200" y1="0" y2="40" />
+        <line x1="210" x2="210" y1="0" y2="40" />
+        <line x1="220" x2="220" y1="0" y2="40" />
+        <line x1="230" x2="230" y1="0" y2="40" />
+        <line x1="240" x2="240" y1="0" y2="40" />
+        <line x1="250" x2="250" y1="0" y2="40" />
+        <line x1="260" x2="260" y1="0" y2="40" />
+        <line x1="270" x2="270" y1="0" y2="40" />
+        <line x1="280" x2="280" y1="0" y2="40" />
+        <line x1="290" x2="290" y1="0" y2="40" />
+        <line x1="300" x2="300" y1="0" y2="40" />
+        <line x1="310" x2="310" y1="0" y2="40" />
+      </g>
+      <line x1="0" x2="0" y1="0" y2="40" stroke-width="2" stroke-dasharray="2 9" stroke-dashoffset="3" stroke="#cccccc" />
+      <line x1="320" x2="320" y1="0" y2="40" stroke-width="2" stroke-dasharray="2 9" stroke-dashoffset="3" stroke="#cccccc" />
+      <use x="5" y="45" href="#fuel" />
+      <use x="15" y="45" href="#fuel" />
+      <use x="25" y="45" href="#fuel" />
+      <use x="65" y="45" href="#fuel" />
+      <use x="65" y="35" href="#fuel" />
+      <use x="90" y="35" href="#multienvironment1" />
+      <use x="235" y="25" href="#workshop" />
+      <use x="275" y="25" href="#multienvironment2" />
+      <use x="305" y="35" href="#fuel" />
+      <use x="315" y="35" href="#fuel" />
+      <use x="315" y="25" href="#fuel" />
+      <use x="315" y="15" href="#fuel" />
+      <line x1="110" x2="110" y1="10" y2="40" />
+
+      <line x1="130" x2="140" y1="10" y2="10" />
+      <!-- <line x1="100" x2="110" y1="10" y2="10" /> -->
+      <line x1="140" x2="140" y1="10" y2="40" />
+      <line x1="200" x2="200" y1="10" y2="40" />
+      <line x1="175" x2="200" y1="0" y2="0" />
+      <line x1="140" x2="165" y1="0" y2="0" />
+      <line x1="140" x2="180" y1="10" y2="10" />
+      <line x1="190" x2="200" y1="10" y2="10" />
+
+      <use x="70" y="5" href="#pressure_hatch" />
+      <use x="140" y="5" href="#pressure_hatch" />
+      <use x="200" y="5" href="#pressure_hatch" />
+
+      <use x="170" y="0" href="#pressure_hatch" transform="rotate(90 170,0)" />
+      <use x="125" y="10" href="#pressure_hatch" transform="rotate(90 125,10)" />
+      <use x="185" y="10" href="#pressure_hatch" transform="rotate(90 185,10)" />
+
+      <use x="210" y="25" href="#repair_drones" />
+      <use x="115" y="15" href="#fresher" transform="rotate(180 115,15)" />
+      <use x="125" y="28.5" href="#probe_drones" />
+      <use x="145" y="15" href="#elevator_shaft" />
+      <use x="195" y="15" href="#elevator_shaft" />
+      <use x="170" y="20" href="#engineering_console0" />
+      <use x="170" y="34" href="#engineering_console2" />
+      <use x="170" y="48" href="#engineering_console0" />
+    </g>
+    <g id="Q2eng" transform="translate(80,390)" >
+      <path stroke-width="2" fill="#cccccc"
+        d="m0,0 10,-10 h40 l10,10 v40 l-10,20 h-40 l-10,-20 z" />
+      <use x="5" y="15" href="#elevator" />
+      <use x="55" y="15" href="#elevator" />
+      <g stroke="#999999" stroke-width=".1">
+        <line x1="0" x2="60" y1="0" y2="0" />
+        <line x1="0" x2="60" y1="10" y2="10" />
+        <line x1="0" x2="60" y1="20" y2="20" />
+        <line x1="0" x2="60" y1="30" y2="30" />
+        <line x1="0" x2="60" y1="40" y2="40" />
+        <line x1="5" x2="55" y1="50" y2="50" />
+        <line x1="10" x2="10" y1="-10" y2="60" />
+        <line x1="20" x2="20" y1="-10" y2="60" />
+        <line x1="30" x2="30" y1="-10" y2="60" />
+        <line x1="40" x2="40" y1="-10" y2="60" />
+        <line x1="50" x2="50" y1="-10" y2="60" />
+      </g>
+    </g>
+    <g id="Q4eng" transform="translate(220,390)" >
+      <path stroke-width="2" fill="#cccccc"
+        d="m0,0 10,-10 h40 l10,10 v40 l-10,20 h-40 l-10,-20 z" />
+      <use x="5" y="15" href="#elevator" />
+      <use x="55" y="15" href="#elevator" />
+      <g stroke="#999999" stroke-width=".1">
+        <line x1="0" x2="60" y1="0" y2="0" />
+        <line x1="0" x2="60" y1="10" y2="10" />
+        <line x1="0" x2="60" y1="20" y2="20" />
+        <line x1="0" x2="60" y1="30" y2="30" />
+        <line x1="0" x2="60" y1="40" y2="40" />
+        <line x1="5" x2="55" y1="50" y2="50" />
+        <line x1="10" x2="10" y1="-10" y2="60" />
+        <line x1="20" x2="20" y1="-10" y2="60" />
+        <line x1="30" x2="30" y1="-10" y2="60" />
+        <line x1="40" x2="40" y1="-10" y2="60" />
+        <line x1="50" x2="50" y1="-10" y2="60" />
+      </g>
+    </g>
+  </g>
+</svg>
