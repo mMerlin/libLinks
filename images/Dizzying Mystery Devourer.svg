@@ -12,6 +12,7 @@
   y="0"
 >
 <!--
+  viewBox="160 240 35 50"
   viewBox="186 115 10.5 15"
   viewBox="145 80 70 100"
   viewBox="119 250 35 50"
@@ -110,14 +111,14 @@
     <g id="medical_bay">
       <path stroke="black" stroke-width="1"
         d="m-10,15 v-30 h20 v30" />
-      <text x="-8" y="2">MB</text>
+      <text x="-8" y="2" fill="black" >MB</text>
       <use y="-15" href="#sliding_door"/>
       <use x="-6" y="7.5" href="#single_bed"/>
     </g>
     <g id="workshop">
       <path stroke="black" stroke-width="1"
         d="m-15,15 v-30 h30 v30" />
-      <text x="-5" y="5">W</text>
+      <text x="-5" y="5" fill="black" >W</text>
       <use y="-15" href="#sliding_door"/>
     </g>
     <g id="repair_drones">
@@ -139,7 +140,7 @@
       <line x1="20" x2="20" y1="-25" y2="15" />
       <use x="5" y="-25" href="#pressure_hatch" transform="rotate(90 5,-25)" />
       <path d="m9,13 h-28v-18h-11v-19h49v28z" stroke="green" stroke-dasharray="3.5" stroke-width=".5"/>
-      <text x="-8" >ME</text>
+      <text x="-8" fill="black" >ME</text>
     </g>
     <g id="multienvironment2">
       <line x1="-25" x2="-25" y1="15" y2="-15" />
@@ -150,7 +151,7 @@
       <path stroke="green" stroke-dasharray="3.5" stroke-width=".5" d="m-24,-14 v28h48v-9h11v-19z
       " />
       <!-- <rect x="-24" y="-14" width="48" height="28" stroke="green" stroke-dasharray="3.5" stroke-width=".5" /> -->
-      <text x="-5" y="4" >ME</text>
+      <text x="-5" y="4" fill="black" >ME</text>
     </g>
     <g id="elevator" fill="white" stroke="black" stroke-width=".5">
       <path d="m-2,3.464 4,0 2,-3.464 -2,-3.464 -4,0 -2,3.464z" />
@@ -184,6 +185,10 @@
     <g id="engineering_console2">
       <use href="#engineering_console0" />
       <use x="-11" y="1" href="#engineering_display_up" />
+    </g>
+    <g id="fuel_processor">
+      <rect x="10" width="20" height="10" stroke="black" stroke-width=".5"/>
+      <text x="-5.8" y="3.5" fill="black" font-size="10">FP</text>
     </g>
     <rect id="fuel" x="-5" y="-5" width="10" height="10" fill="#8d7560" stroke="none"/>
 
@@ -371,8 +376,6 @@
     <g id="Q3main" transform="translate(10 240)" >
       <path stroke-width="2" fill="#cccccc"
         d="m0,0 h320 v40 h-320z" />
-      <use x="165" y="25" href="#fuel" />
-      <use x="175" y="25" href="#fuel" />
       <use x="165" y="35" href="#fuel" />
       <use x="175" y="35" href="#fuel" />
       <g stroke="#999999" stroke-width=".1">
@@ -451,6 +454,7 @@
       <use x="313" y="25" href="#workstation" transform="rotate(90 313,25)" />
       <use x="140" y="25" href="#air_raft" />
       <use x="165" y="15" href="#elevator_shaft" />
+      <use x="170" y="25" href="#fuel_processor" />
     </g>
 
     <g id="Q4main" transform="translate(10,310)" >
@@ -498,9 +502,14 @@
       </g>
       <line x1="0" x2="0" y1="0" y2="40" stroke-width="2" stroke-dasharray="2 9" stroke-dashoffset="3" stroke="#cccccc" />
       <line x1="320" x2="320" y1="0" y2="40" stroke-width="2" stroke-dasharray="2 9" stroke-dashoffset="3" stroke="#cccccc" />
-      <use x="5" y="45" href="#fuel" />
-      <use x="15" y="45" href="#fuel" />
-      <use x="25" y="45" href="#fuel" />
+      <use x="45" y="15" href="#fuel" />
+      <use x="45" y="25" href="#fuel" />
+      <use x="45" y="35" href="#fuel" />
+      <use x="45" y="45" href="#fuel" />
+      <use x="55" y="15" href="#fuel" />
+      <use x="55" y="25" href="#fuel" />
+      <use x="55" y="35" href="#fuel" />
+      <use x="55" y="45" href="#fuel" />
       <use x="65" y="45" href="#fuel" />
       <use x="65" y="35" href="#fuel" />
       <use x="90" y="35" href="#multienvironment1" />
